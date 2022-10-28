@@ -5,6 +5,7 @@ const mongoose=require('mongoose')
 const routes=require('./routes/main')
 const Detail=require("./models/Detail")
 const Slider=require("./models/Slider")
+const Service=require("./models/Service")
 
 app.use('/static', express.static("public"))
 app.use('', routes)
