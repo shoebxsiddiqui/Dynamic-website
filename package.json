@@ -1,0 +1,21 @@
+{
+  "name": "dynamic_website",
+  "version": "1.0.0",
+  "description": "backend project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon src/app.js -e js,hbs"
+  },
+  "author": "Mohd Shuaib",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.1",
+    "express": "^4.18.2",
+    "hbs": "^4.2.0",
+    "mongoose": "^6.6.7"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}
