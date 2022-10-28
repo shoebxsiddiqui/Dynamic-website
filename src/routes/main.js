@@ -1,8 +1,10 @@
 const express=require("express")
 const {route}=require('express/lib/application')
+const Contact=require("../models/Contact")
 const Detail=require("../models/Detail")
 const Slider =require("../models/Slider")
 const Service=require("../models/Service")
+const { request, response } = require("express")
 
 const routes=express.Router()
 
@@ -22,6 +24,20 @@ routes.get("/gallery", async (req, res)=>{
     res.render("gallery", {
         details: details
     })
+})
+
+routes.post("/process-contact-form", async (request, response) => {
+    console.log("form submitted")
+    console.log(request.body)
+
+    try{
+        const data=Contact.create(request.body)
+        console.log(data)
+        response.redirect("/")
+    } catch(e) {
+        console.log(e)
+        response.redirect("/")
+    }
 })
 
 module.exports=routes

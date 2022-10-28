@@ -2,11 +2,15 @@ const express=require('express')
 const hbs=require('hbs')
 const app=express()
 const mongoose=require('mongoose')
+const bodyParser=require('body-parser')
 const routes=require('./routes/main')
 const Detail=require("./models/Detail")
 const Slider=require("./models/Slider")
 const Service=require("./models/Service")
 
+app.use(bodyParser.urlencoded({
+    extended:true
+}))
 app.use('/static', express.static("public"))
 app.use('', routes)
 
