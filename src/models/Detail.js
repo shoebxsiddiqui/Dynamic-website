@@ -1,4 +1,5 @@
 const mongoose=require("mongoose")
+
 const Detail=mongoose.Schema({
     brandName: String,
     brandIconUrl: String,
