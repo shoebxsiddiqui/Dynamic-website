@@ -3,9 +3,12 @@
   "version": "1.0.0",
   "description": "backend project",
   "main": "index.js",
+  "engines": {
+    "node": "14.x"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon src/app.js -e js,hbs"
+    "start": "node src/app.js -e js,hbs"
   },
   "author": "Mohd Shuaib",
   "license": "ISC",
